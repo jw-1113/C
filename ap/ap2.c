@@ -1,3 +1,7 @@
+// Button 코드
+// 1번버튼 누르면 0 2 4 8 or 1 3 4 7 반복
+// 2번버튼 누르면 전부켜지고 꺼지고 반복
+// 3번버튼 누르면 끄기
 #include "../driver/button.h"
 #include "ap2.h"
 

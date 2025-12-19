@@ -1,23 +1,27 @@
+// LED 코드
+// led 차례대로 1핀씩 켜기
 #include "ap.h"
 #include "../driver/led.h"
 
+    LED led;
+
 void apInit()
 {
+
+    DDRD = 0xff;
+    // for (uint8_t i = 0; i<8; i++){
+    //     ledInint(&led); // 핀 전부 활성화 시키기
+    //     led.pinNumber++;
+    // }
 
 }
 
 
 void apMain()
 {
-    LED led;
+
     led.port = &PORTD; // 포트D로 호출
     led.pinNumber = 0;
-
-    for (uint8_t i = 0; i<8; i++){
-        ledInint(&led); // 핀 전부 활성화 시키기
-        led.pinNumber++;
-    }
-
 
     while (1)
     {
