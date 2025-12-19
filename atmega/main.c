@@ -3,6 +3,6 @@
 
 int main()
 {
-    ap1Main();
+    apMain();
 
 }
