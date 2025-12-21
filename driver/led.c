@@ -10,6 +10,7 @@ void ledInint(LED *led){
     // (1 << led->pinNumber)와 OR연산을 통해서 지정된 포트를 출력
 
     *(led->port - 1) |= (1 << led->pinNumber);
+    // *(led->ddr) |= (1 << led->pinNumber); 위와 같은 코드
 }
 
 
