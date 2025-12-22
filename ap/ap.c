@@ -1,9 +1,8 @@
 // LED 코드
 // led 차례대로 1핀씩 켜기
-#include "ap.h"
+#include "../ap/ap0/ap.h"
 #include "../driver/led.h"
 
-    LED led;
 
 void apInit()
 {
@@ -19,7 +18,7 @@ void apInit()
 
 void apMain()
 {
-
+    LED led;
     led.port = &PORTD; // 포트D로 호출
     led.pinNumber = 0;
 
