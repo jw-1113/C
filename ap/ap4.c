@@ -1,9 +1,9 @@
 
 #include "../ap/ap4/ap4.h"
-#include "driver/fnd.h"
-BUTTON btnCount;
-BUTTON btnStop;
-BUTTON btnReset;
+#include "driver/fnd1.h"
+  BUTTON btnCount;
+  BUTTON btnStop;
+  BUTTON btnReset;
 
 void ap4Init(){
 
@@ -15,7 +15,15 @@ void ap4Init(){
 
 void ap4Main() {
 
-    DDRF = 0xff;
+    DDRF = 0xff;          
+            
+        if (buttonGetState(&btnReset) == ACT_RELEASE) {
+            PORTF = 0x3f;
+        }
+    
+    
+
+
     PORTF = FND_Number[0];
 
     while (1) {
