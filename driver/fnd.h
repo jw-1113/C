@@ -1,7 +1,9 @@
 #include "def.h"
 
-uint8_t FND_Number[] = {
-    0x3f,0x06,0x5b,0x4f,
-    0x66,0x6d, 0x7d, 0x27,
-    0x7f, 0x6f
-};
+#define FND_DATA_DDR    DDRA    // DATA 포트 설정
+#define FND_SELECT_DDR  DDRB    // DDRB 포트 설정
+#define FND_DATA_PORT   PORTA   // DATA 레지스터 설정
+#define FND_SELECT_PORT PORTB   // SELECT 레지스터 설정
+
+void fndDisplay(uint16_t data);
+
