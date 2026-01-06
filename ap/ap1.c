@@ -21,13 +21,13 @@ void ap1Main()
     LED_DDR = 0xff;
 
      while (1) {
-        if(buttonGetState(&btnOn) == ACT_RELEASE) {
+        if(buttonGetState(&btnOn) == ACT_PUSH) {        // 눌렀을때 변화
             LED_PORT = 0xff;
         }
-        if (buttonGetState(&btnOff) == ACT_RELEASE) {
+        if (buttonGetState(&btnOff) == ACT_PUSH) {
             LED_PORT = 0x00;       
         }
-        if (buttonGetState(&btnToggle) == ACT_RELEASE) {
+        if (buttonGetState(&btnToggle) == ACT_RELEASE) {    // 눌렀다가 뗄떄 변화
             LED_PORT ^= 0xff;
         }
     
